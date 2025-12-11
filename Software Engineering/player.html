@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Dashboard - Quizically</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-block">
+        <h1><img src="QuizicallyLogo.png" alt="Quizically Logo" style="width: 300px; height: auto;"></h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="homepage.html">Back</a></li>
+            <li><a href="game-history.html">Game History</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="player-dashboard">
+            <div class="join-game">
+                <h2>Join a Game</h2>
+                <form action="join-game.html" method="POST">
+                    <label for="game-code">Enter Game Code:</label>
+                    <input type="text" id="game-code" name="game-code" placeholder="Enter code" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <p style="text-align: center;">OR</p>
+    <footer>
+        <div class="qr-code-scan">
+            <h2>Scan QR Code</h2>
+            <button onclick="alert('QR Code scanning feature coming soon!')">Scan QR Code</button>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+/* General body styling */
+body {
+    margin: 0;
+    background-color: #121640;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    position: relative;
+    /* Ensure pseudo-elements are positioned relative to the body */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll caused by pseudo-elements */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    width: 150px;
+    height: 150px;
+    background-color: #FFAC33;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    background-color: #FF97AC;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Header block styling */
+.header-block {
+    padding: 20px;
+    text-align: center;
+}
+
+.header-block h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navbar styling */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #FF97AC;
+    /* Light purple for buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    /* Added border */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #FFAC33;
+    /* Yellow hover effect */
+    color: #000;
+    /* Black text on hover */
+    border-color: #FFAC33;
+    /* Change border color on hover */
+}
+
+/* Large text for displaying 'Join Game' and 'Host Game' buttons */
+.large-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.large-options .large-text {
+    font-size: 2.5rem;
+    padding: 30px 40px;
+    background-color: #FFAC33;
+    /* Yellow background */
+    color: #000;
+    /* Black text */
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.large-options .large-text:hover {
+    background-color: #FF97AC;
+    /* Light purple hover effect */
+    color: white;
+}
+
+/* Formatting for player.html (Join Game) */
+.player-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.player-dashboard .join-game {
+    text-align: center;
+    background-color: #FFAC33;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-dashboard .join-game h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.player-dashboard .join-game form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player-dashboard .join-game label {
+    font-size: 1rem;
+    color: white;
+}
+
+.player-dashboard .join-game input[type="text"] {
+    padding: 20px;
+    border: 2px solid #FFAC33;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.player-dashboard .join-game input[type="text"]:focus {
+    border-color: #121640;
+    box-shadow: 0 0 5px #121640;
+}
+
+.player-dashboard .join-game button {
+    padding: 10px 20px;
+    background-color: #FFAC33;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.player-dashboard .join-game button:hover {
+    background-color: #121640;
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    background-color: #121640;
+    color: white;
+    text-align: center;
+}
+
+footer .qr-code-scan h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* QR code formatting */
+footer .qr-code-scan button {
+    padding: 10px 20px;
+    background-color: #FFAC33;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer .qr-code-scan button:hover {
+    background-color: #FF97AC;
+    color: white;
+}
+
+/* Formatting for host.html (Host Game) */
+.host-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    text-align: center;
+}
+
+.host-dashboard>div {
+    background-color: #FF97AC;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.host-dashboard>div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.host-dashboard h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.host-dashboard p {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.host-dashboard button {
+    padding: 10px 20px;
+    background-color: #FFAC33;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.host-dashboard button:hover {
+    background-color: #141536;
+    color: white;
+}
